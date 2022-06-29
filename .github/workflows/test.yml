@@ -1,16 +1,23 @@
-name: My First Hello World Yaml file
-on: [push]
-jobs:
-    print-hello-world:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-node@v2
-            with:
-                node-version: 14
-            - name: Install Node modules
-              run: yarn
-            - name: Build the Project
-              run: yarn build
-            - name: Setup Finished
-              run: echo "hurrayy!!"
+--- 
+jobs: 
+  print-hello-world: 
+    runs-on: ubuntu-latest
+    steps: 
+      - 
+        uses: actions/checkout@v2
+      - 
+        uses: actions/setup-node@v2
+        with: 
+          node-version: 14
+      - 
+        name: "Install Node modules"
+        run: yarn
+      - 
+        name: "Build the Project"
+        run: "yarn build"
+      - 
+        name: "Setup Finished"
+        run: "echo \"hurrayy!!\""
+name: "My First Hello World Yaml file"
+true: 
+  - push
